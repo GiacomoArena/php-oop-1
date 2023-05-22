@@ -3,9 +3,9 @@
   require_once __DIR__ . '/models/Movies.php';
 
   $allMovies = [
-    new Movies('the lord of the rings', 'Peter Jackson' ,'2h 58m'),
-    new Movies('Forrest Gump', 'Robert Zemeckis' ,'2h 22m'),
-    new Movies('The Green Mile', 'Frank Darabont' ,'3h 09m'),
+    new Movies('the lord of the rings', 'Peter Jackson' ,'2h 58m', new YearAndCover(2002, 'yes')),
+    new Movies('Forrest Gump', 'Robert Zemeckis' ,'2h 22m',new YearAndCover(1994, 'yes')),
+    new Movies('The Green Mile', 'Frank Darabont' ,'3h 09m',new YearAndCover(1999, 'yes')),
   ];
 
    // var_dump($allMovies[0]->getMovieInfo())
@@ -32,6 +32,8 @@
       <th scope="col">Title</th>
       <th scope="col">Director</th>
       <th scope="col">Timing</th>
+      <th scope="col">Year</th>
+      <th scope="col">Cover</th>
     </tr>
   </thead>
   <tbody>
@@ -40,6 +42,8 @@
         <th scope="row"><?php echo $Movie -> title ?></th>
         <td> <?php echo $Movie -> director ?> </td>
         <td> <?php echo $Movie -> timing ?> </td>
+        <td> <?php echo $Movie -> YearAndCover -> year ?> </td>
+        <td> <?php echo $Movie -> YearAndCover -> cover ?> </td>
       </tr>
     <?php endforeach; ?>
   </tbody>
