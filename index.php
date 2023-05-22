@@ -3,9 +3,18 @@
   class Movie{
     public $title;
     public $director; 
-    public $timing;
+    public $timing = 60;
 
-    
+    public function __construct($_title, $_director, $_timing){
+      $this->title = $_title;
+      $this->director = $_director;
+      $this->timing = $_timing;
+    }
+
+    public getMovieInfo(){
+      return 
+    }
+
   }
 
 
