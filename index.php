@@ -8,7 +8,7 @@
     new Movies('The Green Mile', 'Frank Darabont' ,'3h 09m'),
   ];
 
-    var_dump($allMovies[0]->getMovieInfo())
+   // var_dump($allMovies[0]->getMovieInfo())
 ?>
 
 
@@ -23,7 +23,28 @@
   <title>PHP OOP - 1</title>
 </head>
 <body>
-  
+
+  <div class="container mt-5">
+    <h1>Movies</h1>
+  <table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Director</th>
+      <th scope="col">Timing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach ($allMovies as $Movie): ?>
+      <tr>
+        <th scope="row"><?php echo $Movie -> title ?></th>
+        <td> <?php echo $Movie -> director ?> </td>
+        <td> <?php echo $Movie -> timing ?> </td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
+  </div>
 
 </body>
 </html>
