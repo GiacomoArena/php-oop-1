@@ -2,6 +2,7 @@
 require_once __DIR__ . '/YearAndCover.php';
 
 class Movies{
+  public static $mainTitle = 'Movies';
   public $title;
   public $director; 
   public $timing = 60;

@@ -25,7 +25,7 @@
 <body>
 
   <div class="container mt-5">
-    <h1>Movies</h1>
+    <h1><?php echo Movies::$mainTitle  ?></h1>
   <table class="table mt-5">
   <thead>
     <tr>
