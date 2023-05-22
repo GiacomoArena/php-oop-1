@@ -1,23 +1,14 @@
 <?php
 
-  class Movie{
-    public $title;
-    public $director; 
-    public $timing = 60;
+  require_once __DIR__ . '/models/Movies.php';
 
-    public function __construct($_title, $_director, $_timing){
-      $this->title = $_title;
-      $this->director = $_director;
-      $this->timing = $_timing;
-    }
+  $allMovies = [
+    new Movies('the lord of the rings', 'Peter Jackson' ,'2h 58m'),
+    new Movies('Forrest Gump', 'Robert Zemeckis' ,'2h 22m'),
+    new Movies('The Green Mile', 'Frank Darabont' ,'3h 09m'),
+  ];
 
-    public getMovieInfo(){
-      return 
-    }
-
-  }
-
-
+    var_dump($allMovies[0]->getMovieInfo())
 ?>
 
 
